@@ -69,5 +69,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        #asignar un rol de admin o de empleado de acuerdo al valor que viene del form
     }
 }

@@ -14,7 +14,15 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                 
+
+                    <a class="btn btn-primary" href="{{ url('/empresas') }}" role="button">Empresas</a>
+                
+
+                    <div id="app">
+                        <example-component> </example-component>
+                        </div>
+
                 </div>
             </div>
         </div>

@@ -40,6 +40,19 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="rol" class="col-md-4 col-form-label text-md-end">{{ __('Seleccione su rol') }}</label>
+
+                            <div class="col-md-6">
+                                {{-- <input id="rol" type="" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"> --}}
+
+                             <select name="rol" id="rol" class="form-control" >
+                                 <option value="admin">Soy dueño de una empresa</option>
+                                 <option value="emple">Soy empleado</option>
+                             </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
