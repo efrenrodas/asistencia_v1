@@ -5,32 +5,25 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Empresa
+ * Class EmpresaEmpleado
  *
  * @property $id
- * @property $Nombre
- * @property $Ruc
- * @property $Correo
  * @property $id_user
- * @property $longtud
- * @property $logintud
+ * @property $id_empresa
  * @property $created_at
  * @property $updated_at
  *
+ * @property Empresa $empresa
  * @property User $user
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Empresa extends Model
+class EmpresaEmpleado extends Model
 {
     
     static $rules = [
-		'Nombre' => 'required',
-		'Ruc' => 'required',
-		'Correo' => 'required',
-		//'id_user' => 'required',
-		'latitud' => 'required',
-		'longitud' => 'required',
+		'id_user' => 'required',
+		'id_empresa' => 'required',
     ];
 
     protected $perPage = 20;
@@ -40,9 +33,17 @@ class Empresa extends Model
      *
      * @var array
      */
-    protected $fillable = ['Nombre','Ruc','Correo','id_user','latitud','longitud','codigo'];
+    protected $fillable = ['id_user','id_empresa'];
 
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function empresa()
+    {
+        return $this->hasOne('App\Models\Empresa', 'id', 'id_empresa');
+    }
+    
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */

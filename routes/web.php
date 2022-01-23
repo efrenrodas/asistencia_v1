@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpresaController;
+use App\Http\Controllers\EmpresaEmpleadoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,11 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('empresas', EmpresaController::class);
+
+Route::resource('empresa-empleados', EmpresaEmpleadoController::class);
+
+Route::post('codigo',[EmpresaEmpleadoController::class,'codigo'])->name('codigo.actualiza');
+
+Route::get('unirme', function () {
+    return view('empresa-empleado.unirme');
+})->name('emp.unirme');

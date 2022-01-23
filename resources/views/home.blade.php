@@ -15,13 +15,18 @@
                     @endif
 
                  
+@can('administrar')
+<a class="btn btn-primary" href="{{ url('/empresas') }}" role="button">Empresas</a>
+@endcan
 
-                    <a class="btn btn-primary" href="{{ url('/empresas') }}" role="button">Empresas</a>
+@can('marcar')
+<a class="btn btn-primary" href="" role="button">Marcar Asistencia</a>
+<a class="btn btn-warning" href="{{ route('emp.unirme') }}" role="button">Unirme a empresa </a>
+@endcan
+                 
                 
 
-                    <div id="app">
-                        <example-component> </example-component>
-                        </div>
+                 
 
                 </div>
             </div>
