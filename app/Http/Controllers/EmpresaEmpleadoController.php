@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\EmpresaEmpleado;
 use Illuminate\Http\Request;
 use App\Models\Empresa;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class EmpresaEmpleadoController
@@ -44,12 +45,25 @@ class EmpresaEmpleadoController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(EmpresaEmpleado::$rules);
+        //return response()->json($request);
+        $empresa=Empresa::find($request['empresa']);
+        if ($empresa && $empresa->codigo==$request['codigo']) {
 
-        $empresaEmpleado = EmpresaEmpleado::create($request->all());
+           // request()->validate(EmpresaEmpleado::$rules);
+           $registro['id_user']=Auth()->id();
+            $registro['id_empresa']=$empresa->id;
 
-        return redirect()->route('empresa-empleados.index')
-            ->with('success', 'EmpresaEmpleado created successfully.');
+        //    return response()->json($registro);
+            $empresaEmpleado = EmpresaEmpleado::create($registro);
+
+            return redirect()->back()->withInput()
+                ->with('success', 'Registro creado correctamente.');
+        }
+        else{
+            return  redirect()->back()->withInput()->with('success', 'Datos incorrectos.');
+        }
+
+
     }
 
     /**
@@ -109,7 +123,7 @@ class EmpresaEmpleadoController extends Controller
     }
     public function codigo(Request $request)
     {
-      //  return response()->json($request);
+       // return response()->json($request);
         $id=$request['id'];
         $empresa=Empresa::find($id);
         $empresa['codigo']=$request['codigo'];

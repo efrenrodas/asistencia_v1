@@ -14,19 +14,19 @@
                         </div>
                     @endif
 
-                 
-@can('administrar')
-<a class="btn btn-primary" href="{{ url('/empresas') }}" role="button">Empresas</a>
-@endcan
 
-@can('marcar')
-<a class="btn btn-primary" href="" role="button">Marcar Asistencia</a>
-<a class="btn btn-warning" href="{{ route('emp.unirme') }}" role="button">Unirme a empresa </a>
-@endcan
-                 
-                
+                        @can('administrar')
+                        <a class="btn btn-primary" href="{{ url('/empresas') }}" role="button">Empresas</a>
+                        @endcan
 
-                 
+                        @can('marcar')
+                        <a class="btn btn-primary" href="" role="button">Marcar Asistencia</a>
+                        <a class="btn btn-warning" href="{{ route('emp.unirme') }}" role="button">Unirme a empresa </a>
+                        @endcan
+
+
+
+
 
                 </div>
             </div>
