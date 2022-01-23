@@ -66,7 +66,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link scroll current" href="#linkHome">Inicio</a>
+                        <a class="nav-link scroll current" href="#linkHome">derecho</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#linkFeatures">Features</a>
