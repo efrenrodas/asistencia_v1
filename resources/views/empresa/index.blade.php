@@ -35,7 +35,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 										<th>Nombre</th>
 										<th>Ruc</th>
 										<th>Correo</th>
@@ -50,7 +50,7 @@
                                     @foreach ($empresas as $empresa)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 											<td>{{ $empresa->Nombre }}</td>
 											<td>{{ $empresa->Ruc }}</td>
 											<td>{{ $empresa->Correo }}</td>
@@ -62,6 +62,8 @@
                                                 <form action="{{ route('empresas.destroy',$empresa->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('empresas.show',$empresa->id) }}"><i class="fa fa-fw fa-eye"></i> Administrar</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('empresas.edit',$empresa->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-info" href="{{ route('empresa.reporte',['id_emp'=>$empresa->id])}}" role="button">Reporte</a>
+
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Asistencium
+    Asistencia
 @endsection
 
 @section('content')
@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
 
-										<th>Id User</th>
+										<th>Usuario</th>
 										<th>Hora</th>
 										<th>Tipo</th>
 										<th>Empresa</th>
@@ -49,7 +49,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
-											<td>{{ $asistencium->id_user }}</td>
+											<td>{{ $asistencium->user->name }}</td>
 											<td>{{ $asistencium->hora }}</td>
 											<td>{{ $asistencium->tipo }}</td>
 											<td>{{ $asistencium->empresa->Nombre }}</td>

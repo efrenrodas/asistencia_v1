@@ -140,11 +140,13 @@ class AsistenciumController extends Controller
         return redirect()->route('asistencia.index')
             ->with('success', 'Asistencium deleted successfully');
     }
-    public function reporte()
+    public function reporte(Request $request)
     {
-        $id=Auth()->id();
+        $id=$request['id_emp'];
 
-        $asistencia = Asistencium::where('id_user','=',$id)->paginate();
+     //   $id=Auth()->id();
+
+        $asistencia = Asistencium::where('id_empresa','=',$id)->paginate();
 
         return view('asistencium.index', compact('asistencia'))
             ->with('i', (request()->input('page', 1) - 1) * $asistencia->perPage());
