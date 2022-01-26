@@ -137,13 +137,13 @@
                 </div>
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
-                    <h4>Titulo</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae ab illum sunt ut in excepturi tenetur a.</p>
+                    <h4>Escalable</h4>
+                    <p>A medida que crece la empresa y aumenta el personal los equipos de registro pueden volverse un limitante. Nos adaptamos a cualquier necesidad y tamaño</p>
                 </div>
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
-                    <h4>Titulo</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae ab illum sunt ut in excepturi tenetur a.</p>
+                    <h4>Ahorro</h4>
+                    <p>Evita la compra de equipos que con el tiempo tendrán obsolescencia.</p>
                 </div>
             </div>
         </section>
