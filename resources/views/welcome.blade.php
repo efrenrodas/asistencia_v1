@@ -113,7 +113,7 @@
         <a id="subir" class="icon-arrow-up scroll" href="#linkHome"></a>
         <!-- Sección Features -->
         <section class="boxFeatures" id="linkFeatures">
-            <h3>Features</h3>
+            <h3>Gratis hasta 50 usuarios</h3>
             <div class="features">
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
