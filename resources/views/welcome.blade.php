@@ -117,23 +117,23 @@
             <div class="features">
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
-                    <h4>Titulo</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae ab illum sunt ut in excepturi tenetur a.</p>
+                    <h4>Control</h4>
+                    <p>Registra y controla la hora de entrada y salida del personal que trabaja en tu empresa</p>
                 </div>
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
-                    <h4>Titulo</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae ab illum sunt ut in excepturi tenetur a.</p>
+                    <h4>Informes</h4>
+                    <p>Genera informes de manera rápida y ágil, para medir la productividad del personal.</p>
                 </div>
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
-                    <h4>Titulo</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae ab illum sunt ut in excepturi tenetur a.</p>
+                    <h4>Adaptable</h4>
+                    <p>Nuestro software puede integrarse con todos los sistemas de control de presencia como: tablets, dispositivos biométricos, lectores de tarjetas.</p>
                 </div>
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
-                    <h4>Titulo</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae ab illum sunt ut in excepturi tenetur a.</p>
+                    <h4>Flexible</h4>
+                    <p>Se puede hacer configuraciones y ajuste de acuerdo a las necesidades de cada empresa.</p>
                 </div>
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
