@@ -154,12 +154,14 @@
                     <img src="images/do_ui_kit_download_cta_floating_devices-2x.png" alt="">
                 </div>
                 <article class="contenido">
-                    <h3>Create interactive <br>prototypes</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam possimus nemo sequi cum? Obcaecati eos possimus ea numquam fugit. Quae et labore accusamus consectetur voluptatum placeat incidunt quaerat quibusdam accusantium.</p>
+                    <h3>Breve Descripción <br>de la Aplicación</h3>
+                    <p>Aplicación para el control de asistencia laboral, que permitirá verificar las novedades suscitadas con el personal, es decir, si estos llegaron al inicio de la jornada laboral, si tuvieron retrasos, si no asistieron, si tuvieron que abandonar el lugar de trabajo y registro del fin de la jornada laboral.</p>
                     <ul>
-                        <li> <span class="icon-check"></span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <li> </span> Beneficios.
                         </li>
-                        <li> <span class="icon-check"></span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <li> <span class="icon-check"></span> Ayuda y soporte al personal de talento humano.
+                        </li>
+                        <li> <span class="icon-check"></span> Información actualizada y oportuna.
                         </li>
                     </ul>
                     <div class="boxCardCallToActions" id="cardAnimada">
