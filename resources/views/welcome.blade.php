@@ -66,7 +66,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link scroll current" href="#linkHome">derecho</a>
+                        <a class="nav-link scroll current" href="#linkHome">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#linkFeatures">Features</a>
@@ -113,7 +113,7 @@
         <a id="subir" class="icon-arrow-up scroll" href="#linkHome"></a>
         <!-- Sección Features -->
         <section class="boxFeatures" id="linkFeatures">
-            <h3>Features</h3>
+            <h3>Gratis hasta 50 usuarios</h3>
             <div class="features">
                 <div class="cardFeatures">
                     <span class="icon-refresh"></span>
