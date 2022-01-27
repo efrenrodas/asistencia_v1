@@ -151,8 +151,7 @@
         <section class="boxCallToActions">
             <div class="callToActions">
                 <div class="imgCallToActions">
-                    <img src="images/do_ui_k
-                    it_download_cta_floating_devices-2x.png" alt="">
+                    <img src="images/do_ui_kit_download_cta_floating_devices-2x.png" alt="">
                 </div>
                 <article class="contenido">
                     <h3>Create interactive <br>prototypes</h3>
