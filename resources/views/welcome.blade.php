@@ -69,14 +69,15 @@
                         <a class="nav-link scroll current" href="#linkHome">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll" href="#linkFeatures">Features</a>
+                        <a class="nav-link scroll" href="#linkFeatures">Oferta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll" href="#linkAbout">About</a>
+                        <a class="nav-link scroll" href="#linkAbout">Conocenos</a>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#linkTestimonial">Testimonial</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#linkContacto">Contacto</a>
                     </li>
@@ -101,7 +102,7 @@
             <div class="textosHeader">
                 <h1>Control Asistencia Laboral</h1>
                 <p>Cuando conoces los tiempos que labora cada uno de tus trabajadores, resulta más sencillo conocer el valor de la hora trabajada, garantizando la correcta evaluación y seguimiento de la gestión organizacional.</p>
-                <a class="botonGetStarted" href="#" rel="nofollow noopener">Empezar</a>
+               <!-- <a class="botonGetStarted" href="#" rel="nofollow noopener">Empezar</a>-->
             </div>
             <div class="imgHeader">
                 <img src="images/laboral.jpg" alt="">
@@ -154,12 +155,14 @@
                     <img src="images/do_ui_kit_download_cta_floating_devices-2x.png" alt="">
                 </div>
                 <article class="contenido">
-                    <h3>Create interactive <br>prototypes</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam possimus nemo sequi cum? Obcaecati eos possimus ea numquam fugit. Quae et labore accusamus consectetur voluptatum placeat incidunt quaerat quibusdam accusantium.</p>
+                    <h3>Breve Descripción <br>de la Aplicación</h3>
+                    <p>Ante la obsolescencia que tienen los equipos tradicionales de control de asistencia, hemos desarrollado ASISMEDIUM.
+                        ASISMEDIUM es una aplicación que permite controlar la asistencia laboral, dando la facilidad al empleador de verificar novedades como, asistencias, cumplimientos de horas o de trabajos de manera eficaz y rápida.</p>
                     <ul>
-                        <li> <span class="icon-check"></span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <li><span> </span> Beneficios</li>
+                        <li> <span class="icon-check"></span> Ayuda y soporte al personal de talento humano.
                         </li>
-                        <li> <span class="icon-check"></span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <li> <span class="icon-check"></span>  Información actualizada y oportuna.
                         </li>
                     </ul>
                     <div class="boxCardCallToActions" id="cardAnimada">
@@ -181,31 +184,31 @@
         </section>
         <!-- Sección About -->
         <section class="boxAbout" id="linkAbout">
-            <h3>About Us</h3>
+            <h3>Sobre Nosotros</h3>
             <div class="about">
                 <div class="imgAbout">
                     <img src="images/about_1.jpg" alt="">
                 </div>
                 <article class="contenidoAbout">
-                    <h3>Create interactive prototypes</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam possimus nemo sequi cum? Obcaecati eos possimus ea numquam fugit. Quae et labore accusamus consectetur voluptatum placeat incidunt quaerat quibusdam accusantium.</p>
-                    <a class="botonGetStarted" href="#">Learn More</a>
+                    <h3>Creamos soluciones escalables</h3>
+                    <p>Especializados en el desarrollo de la mejor herramienta tecnológica, para el control y seguimiento de asistencia del personal que integra el equipo de trabajo de la empresa.</p>
+                   <!-- <a class="botonGetStarted" href="#">Learn More</a>-->
                 </article>
             </div>
         </section>
         <!-- Sección Contacto -->
         <section class="boxContacto" id="linkContacto">
-            <h3>Get In Touch</h3>
+            <h3>Contáctanos</h3>
             <div class="container contacto">
                 <form id="miForm">
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputName"><b>First Name</b></label>
-                            <input type="text" class="form-control" id="inputName" placeholder="First Name..." required>
+                            <label for="inputName"><b>Nombres</b></label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Nombres..." required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputLastName"><b>Last Name</b></label>
-                            <input type="text" class="form-control" id="inputLastName" placeholder="Last Name..." required>
+                            <label for="inputLastName"><b>Apellidos</b></label>
+                            <input type="text" class="form-control" id="inputLastName" placeholder="Apellidos..." required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -213,14 +216,14 @@
                         <input type="email" class="form-control" id="inputEmail" placeholder="Email..." required>
                     </div>
                     <div class="form-group">
-                        <label for="inputSubject"><b>Subject</b></label>
-                        <input type="text" class="form-control" id="inputSubject" placeholder="Subject..." required>
+                        <label for="inputSubject"><b>Motivo</b></label>
+                        <input type="text" class="form-control" id="inputSubject" placeholder="Motivo..." required>
                     </div>
                     <div class="form-group">
-                        <label for="message"><b>Message</b></label>
-                        <textarea class="form-control" rows="5" id="message" placeholder="Message..." required></textarea>
+                        <label for="message"><b>Mensaje</b></label>
+                        <textarea class="form-control" rows="5" id="message" placeholder="Mensaje..." required></textarea>
                     </div>
-                    <button type="submit" class="botonEnviarMensaje">Send Message</button>
+                    <button type="submit" class="botonEnviarMensaje">Enviar</button>
                 </form>
             </div>
         </section>
