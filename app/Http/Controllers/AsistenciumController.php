@@ -56,7 +56,7 @@ class AsistenciumController extends Controller
 
         $empresa=Empresa::find($emp);
         if ($empresa) {
-            if ($lat==$empresa->latitud && $lon==$empresa->longitud) {
+           // if ($lat==$empresa->latitud && $lon==$empresa->longitud) {
                 # code...
              //   return response()->json($request);
                 $hora =Carbon::now();
@@ -69,11 +69,11 @@ class AsistenciumController extends Controller
                  $registro['id_empresa']=$request['empresa'];
                 $asistencium = Asistencium::create($registro);
                 $mensaje="Asistencia creada correctamente.";
-            }
-            else
-            {
-                $mensaje="Asistencia no registrada, no se encuentra en la empresa";
-            }
+          //  }
+         //   else
+         //   {
+         //       $mensaje="Asistencia no registrada, no se encuentra en la empresa";
+        //    }
         }
 
        // request()->validate(Asistencium::$rules);
