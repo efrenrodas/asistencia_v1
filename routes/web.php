@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AsistenciumController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpresaController;
 use App\Http\Controllers\EmpresaEmpleadoController;
@@ -32,3 +33,7 @@ Route::post('codigo',[EmpresaEmpleadoController::class,'codigo'])->name('codigo.
 Route::get('unirme', function () {
     return view('empresa-empleado.unirme');
 })->name('emp.unirme');
+
+Route::resource('asistencia',AsistenciumController::class);
+
+Route::get('reporte',[AsistenciumController::class,'reporte'])->name('empresa.reporte');

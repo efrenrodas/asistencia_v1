@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Empresa
+    Asistencia
 @endsection
 
 @section('content')
@@ -13,13 +13,13 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Empresa') }}
+                                {{ __('Asistencia del empleado') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('empresas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                {{-- <a href="{{ route('asistencia.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
-                                </a>
+                                </a> --}}
                               </div>
                         </div>
                     </div>
@@ -36,39 +36,33 @@
                                     <tr>
                                         <th>No</th>
 
-										<th>Nombre</th>
-										<th>Ruc</th>
-										<th>Correo</th>
-										<th>Id User</th>
-										<th>latitud</th>
-										<th>Longitud</th>
+										<th>Usuario</th>
+										<th>Hora</th>
+										<th>Tipo</th>
+										<th>Empresa</th>
 
-                                        <th></th>
+                                        {{-- <th></th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($empresas as $empresa)
+                                    @foreach ($asistencia as $asistencium)
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
-											<td>{{ $empresa->Nombre }}</td>
-											<td>{{ $empresa->Ruc }}</td>
-											<td>{{ $empresa->Correo }}</td>
-											<td>{{ $empresa->id_user }}</td>
-											<td>{{ $empresa->latitud }}</td>
-											<td>{{ $empresa->longitud }}</td>
+											<td>{{ $asistencium->user->name }}</td>
+											<td>{{ $asistencium->hora }}</td>
+											<td>{{ $asistencium->tipo }}</td>
+											<td>{{ $asistencium->empresa->Nombre }}</td>
 
-                                            <td>
-                                                <form action="{{ route('empresas.destroy',$empresa->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('empresas.show',$empresa->id) }}"><i class="fa fa-fw fa-eye"></i> Administrar</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('empresas.edit',$empresa->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
-                                                    <a class="btn btn-sm btn-info" href="{{ route('empresa.reporte',['id_emp'=>$empresa->id])}}" role="button">Reporte</a>
-
+                                            {{-- <td>
+                                                <form action="{{ route('asistencia.destroy',$asistencium->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('asistencia.show',$asistencium->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('asistencia.edit',$asistencium->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
-                                            </td>
+                                            </td> --}}
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -76,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $empresas->links() !!}
+                {!! $asistencia->links() !!}
             </div>
         </div>
     </div>

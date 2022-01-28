@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'es',
 
     /*
     |--------------------------------------------------------------------------
@@ -135,6 +135,7 @@ return [
     */
 
     'providers' => [
+
 
         /*
          * Laravel Framework Service Providers...
