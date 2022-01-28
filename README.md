@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="asismedium.png" width="400"></a></p>
+<p align="center"><img src="https://i.ibb.co/1KP0FVj/aismedium.png" width="400"></p>
 
 
 ## Sobre ASISMEDIUM
