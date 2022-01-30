@@ -13,7 +13,7 @@ El proyecto fue desarrollado por 4 estudiantes de la Universidad Tecnica Particl
 ASISMEDIUM ES GRATIS!!
 
 
-### Desarrolladore
+### Desarrolladores
 
 - **[Bryan Maldonado](https://github.com/bryan566)**
 - **[Efren Rodas.](https://github.com/efrenrodas)**
