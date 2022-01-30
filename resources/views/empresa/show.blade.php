@@ -45,22 +45,22 @@
                                 {{ $empresa->longitud }}
                             </div>
                         </div>
-                       
-                            
-                       
-                       
+
+
+
+
 
                     </div>
                 </div>
             </div>
-            
-                
-          
-            
+
+
+
+
         </div>
-    
+
     </section>
- 
+
     {{-- gestionar codigo de empleados --}}
     <section class="content container-fluid">
         <div class="row">
@@ -70,23 +70,27 @@
                         <div class="float-left">
                             <span class="card-title">Codigo para unirse a la empresa</span>
                         </div>
-                        
+
                     </div>
 
                     <div class="card-body">
-                       
-                            
-                            
+
+
+
                                 <form action="{{ route('codigo.actualiza',['id'=>$empresa->id]) }}" method="post">
                                     @csrf
-                                    
-                                     <input type="text" class="form-control" name="codigo" id="codigo" value="{{ $empresa->codigo }}">
-                                    <input type="submit" class="btn btn-success" value="Guardar" style="margin-top: 10px">
-                                    
-                                     
+
+                                     {{-- <input type="text" class="form-control" name="codigo" id="codigo" value="{{ $empresa->codigo }}"> --}}
+                                     <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1">{{$empresa->id}}-</span>
+                                        <input type="text" name="codigo" value="{{ $empresa->codigo }}" class="form-control" placeholder="Codigo" aria-label="Codigo" aria-describedby="basic-addon1">
+                                      </div>
+                                     <input type="submit" class="btn btn-success" value="Guardar" style="margin-top: 10px">
+
+
                                 </form>
-                           
-                       
+
+
 
                     </div>
                 </div>
@@ -103,7 +107,7 @@
                         <div class="float-left">
                             <span class="card-title">Agregar Empleados</span>
                         </div>
-                        
+
                     </div>
 
                     <div class="card-body">
@@ -112,7 +116,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </section>
 @endsection
