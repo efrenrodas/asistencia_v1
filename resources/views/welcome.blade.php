@@ -72,15 +72,15 @@
                         <a class="nav-link scroll" href="#linkFeatures">Oferta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link scroll" href="#linkAbout">Conocenos</a>
+                        <a class="nav-link scroll" href="#linkAbout">Conócenos</a>
                     </li>
                     <!--
                     <li class="nav-item">
                         <a class="nav-link scroll" href="#linkTestimonial">Testimonial</a>
                     </li>-->
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link scroll" href="#linkContacto">Contacto</a>
-                    </li>
+                    </li> --}}
 
                     @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -198,7 +198,7 @@
             </div>
         </section>
         <!-- Sección Contacto -->
-        <section class="boxContacto" id="linkContacto">
+        {{-- <section class="boxContacto" id="linkContacto">
             <h3>Contáctanos</h3>
             <div class="container contacto">
                 <form id="miForm">
@@ -227,7 +227,7 @@
                     <button type="submit" class="botonEnviarMensaje">Enviar</button>
                 </form>
             </div>
-        </section>
+        </section> --}}
     </main>
      <!--Sección Footer-->
     <footer class="footer">
