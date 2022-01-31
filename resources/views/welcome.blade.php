@@ -172,12 +172,12 @@
                                 <div class="imgProfesional">
                                     <img src="images/person_1.jpg" alt="">
                                 </div>
-                                <div class="datosProfesional">
+                                {{-- <div class="datosProfesional">
                                     <h5>Amalia G.</h5>
                                     <h6>Co-Founder, XYZ Inc.</h6>
-                                </div>
+                                </div> --}}
                             </div>
-                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae ab illum sunt ut in excepturi tenetur a, aspernatur iste. Accusamus dolorem delectus tempore debitis quaerat."</p>
+                            {{-- <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae ab illum sunt ut in excepturi tenetur a, aspernatur iste. Accusamus dolorem delectus tempore debitis quaerat."</p> --}}
                         </div>
                     </div>
                 </article>

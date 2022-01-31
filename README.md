@@ -12,6 +12,9 @@ El proyecto fue desarrollado por 4 estudiantes de la Universidad Tecnica Particl
 
 ASISMEDIUM ES GRATIS!!
 
+## Versión 1.0
+
+- Importar sql llamado _asistencia.sql con roles
 
 ### Desarrolladores
 
