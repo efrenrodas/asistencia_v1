@@ -26,14 +26,14 @@
             {{ Form::text('latitud', $empresa->latitud, ['class' => 'form-control' . ($errors->has('latitud') ? ' is-invalid' : ''), 'placeholder' => 'latitud']) }}
             {!! $errors->first('latitud', '<div class="invalid-feedback">:message</p>') !!}
         </div>
-        <div class="form-group">
+        <div class="form-group mb-4">
             {{ Form::label('longitud') }}
             {{ Form::text('longitud', $empresa->longitud, ['class' => 'form-control' . ($errors->has('longitud') ? ' is-invalid' : ''), 'placeholder' => 'longitud']) }}
             {!! $errors->first('longitud', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="box-footer mt15">
+        <button type="submit" class="btn btn-success">Submit</button>
     </div>
 </div>

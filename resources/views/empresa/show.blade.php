@@ -10,11 +10,11 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <div class="float-left">
+                        <div class="float-left mb-2">
                             <span class="card-title">Show Empresa</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('empresas.index') }}"> Back</a>
+                            <a class="btn btn-warning mb-2 col-md-1" href="{{ route('empresas.index') }}"> Atrás </a>
                         </div>
                     </div>
 
