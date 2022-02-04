@@ -3,28 +3,41 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
 
-                        @can('administrar')
-                        <a class="btn btn-primary" href="{{ url('/empresas') }}" role="button">Empresas</a>
-                        @endcan
+                    @can('administrar')
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
 
-                        @can('marcar')
-                        {{-- <a class="btn btn-primary" href="" role="button">Marcar Asistencia</a> --}}
-                        <a class="btn btn-warning" href="{{ route('emp.unirme') }}" role="button">Unirme a empresa </a>
-                        <a class="btn btn-success" href="{{ route('asistencia.index') }}" role="button">Mis marcaciones </a>
+                        <div class="col">
+                            <div class="card">
+                                <img src="images/cocacola.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Empresas</h5>
+                                    <p class="card-text"></p>
+                                    <a class="btn btn-primary" href="{{ url('/empresas') }}" role="button">Gestionar Empresas</a>
+                                </div>
+                            </div>
+                        </div>
 
-                        @endcan
+                    </div>
+                    @endcan
+
+                    @can('marcar')
+                    {{-- <a class="btn btn-primary" href="" role="button">Marcar Asistencia</a> --}}
+                    <a class="btn btn-warning" href="{{ route('emp.unirme') }}" role="button">Unirme a empresa </a>
+                    <a class="btn btn-success" href="{{ route('asistencia.index') }}" role="button">Mis marcaciones </a>
+
+                    @endcan
 
 
 
@@ -36,7 +49,7 @@
             {{-- errores --}}
             <ul>
                 @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                <li>{{ $error }}</li>
                 @endforeach
             </ul>
             {{-- tarjeta de empresas a las que se encuentra asociado --}}
@@ -50,28 +63,29 @@
                                 {{ __('Empresas en las que trabaja') }}
                             </span>
 
-                             <div class="float-right">
+                            <div class="float-right">
                                 <button class="btn btn-info" onclick="leerPos()"> Obtener mi posicion</button>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
-                            <p>{{ $message }}</p>
-                        </div>
+                    <div class="alert alert-success">
+                        <p>{{ $message }}</p>
+                    </div>
                     @endif
 
                     <div class="card-body">
-                      latitud  <input type="text"   readonly id="latitude">
-                      Longitud  <input type="text"  readonly id="longitude">
+                        Latitud <input type="text" readonly id="latitude">
+                        Longitud <input type="text" readonly id="longitude">
+
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
 
-										<th>Empresa</th>
-										<th>Tipo</th>
+                                        <th>Empresa</th>
+                                        <th>Tipo</th>
 
                                         <th>Acción</th>
 
@@ -79,32 +93,32 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($empresaEmpleados as $empresaEmpleado)
-                                        <tr>
-                                            <td>{{ ++$i }}</td>
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
 
-											{{-- <td>{{ $empresaEmpleado->user->name }}</td> --}}
-											<td>{{ $empresaEmpleado->empresa->Nombre }}</td>
-                                            <form action="{{ route('asistencia.store') }}" method="POST">
-                                                @csrf
+                                        {{-- <td>{{ $empresaEmpleado->user->name }}</td> --}}
+                                        <td>{{ $empresaEmpleado->empresa->Nombre }}</td>
+                                        <form action="{{ route('asistencia.store') }}" method="POST">
+                                            @csrf
                                             <td>
-                                                <select  name="tipo" class="form-select" aria-label="Default select example">
+                                                <select name="tipo" class="form-select" aria-label="Default select example">
                                                     {{-- <option selected>Selecciona el tipo de marca</option> --}}
                                                     <option value="entrada">Entrada</option>
                                                     <option value="lonch">Lonch</option>
                                                     <option value="salida">Salida</option>
-                                                  </select>
+                                                </select>
                                             </td>
                                             <td>
                                                 {{-- <a class="btn btn-sm btn-primary " href="{{route('asistencia.store',['id'=>$empresaEmpleado->empresa->id])}}"><i class="fa fa-fw fa-eye"></i> Marcar asistencia</a> --}}
 
-                                                    <input type="hidden" name="empresa" value="{{$empresaEmpleado->empresa->id}}">
-                                                 <input type="hidden"  name="latitude" readonly id="latitude1">
-                                               <input type="hidden" name="longitude" readonly id="longitude1">
-                                                       <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Marcar</button>
-                                                </form>
-                                            </td>
+                                                <input type="hidden" name="empresa" value="{{$empresaEmpleado->empresa->id}}">
+                                                <input type="hidden" name="latitude" readonly id="latitude1">
+                                                <input type="hidden" name="longitude" readonly id="longitude1">
+                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Marcar</button>
+                                        </form>
+                                        </td>
 
-                                        </tr>
+                                    </tr>
                                     @endforeach
                                 </tbody>
                             </table>
