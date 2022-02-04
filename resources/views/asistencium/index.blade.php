@@ -24,7 +24,7 @@ Asistencia
                     </div>
 
                     <div class="float-right">
-                        <a href="{{ route('home') }}" class=" btn btn-warning mb-2 col-md-1">
+                        <a href="{{ route('empresas.index') }}" class=" btn btn-warning mb-2 col-md-1">
                             {{ __('Atrás') }}
                         </a>
                     </div>
