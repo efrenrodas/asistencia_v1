@@ -55,28 +55,21 @@ class AsistenciumController extends Controller
         $emp=$request['empresa'];
 
         $empresa=Empresa::find($emp);
-        if ($empresa) {
-           // if ($lat==$empresa->latitud && $lon==$empresa->longitud) {
-                # code...
-             //   return response()->json($request);
-                $hora =Carbon::now();
-              //  $user=
-              //  $id_empresa
-              //  $tipo=$request['tipo'];
-                $registro['id_user']=Auth()->id();
-                 $registro['hora']=$hora;
-                 $registro['tipo']=$request['tipo'];
-                 $registro['id_empresa']=$request['empresa'];
-                $asistencium = Asistencium::create($registro);
-                $mensaje="Asistencia creada correctamente.";
-          //  }
-         //   else
-         //   {
-         //       $mensaje="Asistencia no registrada, no se encuentra en la empresa";
-        //    }
+        $dist=$this->distancia($lat,$lon,$emp);
+        if ($dist<50) {
+            $hora =Carbon::now();
+
+            $registro['id_user']=Auth()->id();
+             $registro['hora']=$hora;
+             $registro['tipo']=$request['tipo'];
+             $registro['id_empresa']=$request['empresa'];
+            $asistencium = Asistencium::create($registro);
+            $mensaje="Asistencia creada correctamente.";
+        }
+        else{
+            $mensje="No se ha registrado";
         }
 
-       // request()->validate(Asistencium::$rules);
 
 
        return  redirect()->back()->withInput()->with('success', $mensaje);
@@ -150,5 +143,36 @@ class AsistenciumController extends Controller
 
         return view('asistencium.index', compact('asistencia'))
             ->with('i', (request()->input('page', 1) - 1) * $asistencia->perPage());
+    }
+    public function distancia($latitud,$longitud,$idEmpresa)
+    {
+
+        $empresa=Empresa::find($idEmpresa);
+        $r=6371;
+        $cte=pi()/180;
+        $latUser=$latitud;
+        $logUser=$longitud;
+        #obtener distancia a la empresa
+        $latRest=floatval($empresa->latitud);
+        $longRest=floatval($empresa->longitud);
+        $difLat=$latUser-$latRest;
+        $difLon=$logUser-$longRest;
+        $dis=(sin($difLat*$cte/2))**2+cos($latUser*$cte)*cos( $latRest*$cte )*(sin($difLon*$cte/2))**2;
+        $d1=sqrt($dis);
+        $d2=asin($d1);
+            #d = 2*r*a*1000;
+        $df=2*$r*$d2*1000;
+
+         #por defecto 1.5km
+             //if ($df<1500) {
+              //  echo $df."<br>";
+               // echo $restaurant;
+
+               // $restaurant['distancia']=round($df);
+              //  $devueltos[]=$restaurant;
+              #  $devueltos[$key]['distancia']=round($df);
+
+           //
+           return $df;
     }
 }
